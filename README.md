@@ -11,3 +11,14 @@ cd sns-mobile-example
 npm install .
 node index.js
 ```
+
+You'll need to configure the following three environment variables:
+* SNS_KEY_ID (Secret Key for an AWS user)
+* SNS_ACCESS_KEY (Access Key for an AWS user)
+* SNS_ANDROID_ARN (PlatformApplicationArn for your Android (GCM) SNS application)
+
+To add fake users you can do the following curl request:
+
+```
+curl --data "deviceId=some_fake_device_id_for_app" http://127.0.0.1:3000/register
+```
